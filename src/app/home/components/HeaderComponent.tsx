@@ -27,6 +27,7 @@ export const HeaderComponent = () => {
               <Link href="/auth/login">Login</Link>
             )}
           </li>
+          <li>{isAuthenticated && <Link href="/category">Category</Link>}</li>
         </ul>
       </nav>
     </header>
