@@ -1,4 +1,5 @@
 import { catchAndAlert } from '@/shared/utils/ExceptionUtil';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { AuthService } from '../classes/auth.service';
 import { ILogin } from '../interfaces/login.interface';
@@ -8,10 +9,11 @@ export function LoginForm() {
     email: '',
     password: '',
   });
+  const router = useRouter();
 
   const handleLogin = catchAndAlert(async () => {
-    const response = await AuthService.login(formData);
-    alert(JSON.stringify(response, null, 2));
+    await AuthService.login(formData);
+    router.replace('/');
   });
 
   return (

@@ -1,6 +1,10 @@
+import { AuthService } from '@/app/auth/classes/auth.service';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export const HeaderComponent = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(AuthService.isAuthenticated());
+
   return (
     <header>
       <p>E-Commerce</p>
@@ -10,7 +14,18 @@ export const HeaderComponent = () => {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/auth/login">Login</Link>
+            {isAuthenticated ? (
+              <button
+                onClick={() => {
+                  AuthService.logout();
+                  setIsAuthenticated(false);
+                }}
+              >
+                Logout
+              </button>
+            ) : (
+              <Link href="/auth/login">Login</Link>
+            )}
           </li>
         </ul>
       </nav>
