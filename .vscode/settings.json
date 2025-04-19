@@ -1,0 +1,10 @@
+{
+  "editor.formatOnSave": true,
+  "prettier.requireConfig": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "files.insertFinalNewline": true,
+  "files.eol": "\n" // ✅ Forces LF (Line Feed) on save
+}

@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint", // Linting support for TypeScript/JavaScript
+    "esbenp.prettier-vscode", // Code formatting
+    "mongodb.mongodb-vscode", // MongoDB extension
+    "ms-vscode.vscode-typescript-next", // Improved TypeScript support
+    "pkief.material-icon-theme", // Better file icons
+    "formulahendry.auto-rename-tag", // Auto rename paired HTML tags
+    "bradlc.vscode-tailwindcss", // Tailwind CSS IntelliSense (if using Tailwind)
+    "github.copilot", // AI coding assistant (if available)
+    "humao.rest-client" // API testing within VS Code
+  ]
+}
