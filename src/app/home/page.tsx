@@ -1,12 +1,11 @@
 'Use client';
 
-import { HeaderComponent } from './components/HeaderComponent';
+import Pagelayout from './components/pagelayout';
 
 export default function HomePage() {
   return (
-    <div>
-      <HeaderComponent />
-      <h1> </h1>
-    </div>
+    <Pagelayout>
+      <h1 className="text-2xl font-bold">Welcome to the Home Page</h1>
+    </Pagelayout>
   );
 }
