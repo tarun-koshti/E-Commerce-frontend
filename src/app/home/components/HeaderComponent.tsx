@@ -14,6 +14,9 @@ export const HeaderComponent = () => {
             <Link href="/">Home</Link>
           </li>
           <li>
+            <Link href="/shop">Shops</Link>
+          </li>
+          <li>
             {isAuthenticated ? (
               <button
                 onClick={() => {
